@@ -5,6 +5,7 @@ import { RouterLink } from "@angular/router";
   standalone: true,
   imports: [RouterLink],
   templateUrl: "./angelshield.component.html",
+  styleUrl: "./angelshield.component.scss",
   host: { class: "product-page" },
 })
 export class AngelShieldComponent {

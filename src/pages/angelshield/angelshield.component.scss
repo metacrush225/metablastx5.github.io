@@ -1,0 +1,87 @@
+:host {
+  --bg: #061329;
+  --panel: #0a1d37;
+  --line: #183b56;
+  --text: #f1f7ff;
+  --muted: #b1c4d7;
+  --green: #47bed8;
+}
+
+.brand .product-icon {
+  padding: 3px;
+  border-radius: 8px;
+  background: white;
+  mix-blend-mode: normal;
+}
+
+.nav-download {
+  border-color: var(--line);
+}
+
+.closing {
+  background: radial-gradient(ellipse at bottom, #12374e, transparent 70%);
+}
+
+.button:hover {
+  color: #061329;
+  background: #8ae5f8;
+}
+
+.product-art {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 25px;
+  background: radial-gradient(ellipse, #123c5b, transparent 70%);
+
+  img {
+    width: 330px;
+    max-width: 100%;
+    border-radius: 32px;
+    box-shadow: 0 0 70px #47bed825;
+  }
+
+  span {
+    color: var(--muted);
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+}
+
+.banner {
+  margin: 0 64px 45px;
+
+  img {
+    display: block;
+    width: 100%;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+  }
+
+  figcaption {
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .banner {
+    margin-inline: 30px;
+  }
+}
+
+@media (max-width: 700px) {
+  .banner {
+    margin: 0 22px 30px;
+  }
+
+  .product-art {
+    margin-top: 20px;
+
+    img {
+      width: 260px;
+    }
+  }
+}
