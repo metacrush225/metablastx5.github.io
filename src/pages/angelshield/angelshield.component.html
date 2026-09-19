@@ -1,158 +1,311 @@
 <header>
-  <a class="brand" routerLink="/">
-    <img src="chameleon.png" alt="" />
-    Kevin<span>&nbsp;Rosala</span>
+  <a
+    class="brand"
+    routerLink="/angelshield"
+    aria-label="Accueil AngelShieldPlus"
+  >
+    <img
+      class="product-icon"
+      src="angelshield-icon.png"
+      alt=""
+    />
+    AngelShield<span>Plus</span>
   </a>
 
   <nav aria-label="Navigation principale">
-    <a href="#applications">Applications</a>
-    <a href="#apropos">À propos</a>
+    <a routerLink="/">Le développeur</a>
+    <a href="#fonctionnalites">L’application</a>
+    <a href="#questions">Questions</a>
 
-    <a class="nav-download" routerLink="/angelshield">
-      AngelShieldPlus ↗
+    <a
+      class="nav-download"
+      [href]="play"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Google Play ↗
     </a>
   </nav>
 </header>
 
 <main>
-  <section class="hero">
+  <section class="hero" aria-labelledby="hero-title">
     <div class="hero-copy">
       <div class="eyebrow">
-        DÉVELOPPEUR INDÉPENDANT · WEB &amp; MOBILE
+        <span class="tiny-shield" aria-hidden="true">◇</span>
+        SÉCURITÉ PERSONNELLE · ANDROID
       </div>
 
-      <h1>
-        Des idées.<br />
-        Du code.<br />
-        <em>Des outils utiles.</em>
+      <h1 id="hero-title">
+        Gardez le lien.<br />
+        Même quand<br />
+        <em>tout bascule.</em>
       </h1>
 
       <p>
-        Je suis Kevin Rosala. Je crée des expériences numériques utiles,
-        soignées et pensées pour celles et ceux qui les utilisent.
+        Une perte de verticalité. Un besoin d’aide. AngelShieldPlus réunit
+        détection, alertes d’urgence et géolocalisation pour vous aider à
+        prévenir vos proches.
       </p>
 
       <div class="hero-actions">
-        <a class="button primary" href="#applications">
-          Découvrir mes applications ↓
+        <a
+          class="button primary"
+          [href]="play"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M4 3l11 9L4 21V3zm12 10l4-2-4-2-2 2 2 2z"
+              fill="currentColor"
+            />
+          </svg>
+
+          Découvrir sur Google Play
+          <span aria-hidden="true">↗</span>
         </a>
 
-        <a class="text-link" href="#apropos">
-          À propos de moi
+        <a class="text-link" href="#fonctionnalites">
+          Explorer l’application ↓
         </a>
+      </div>
+
+      <div class="platform">
+        Pour Android 8.0 et versions ultérieures
       </div>
     </div>
 
-    <div class="hero-art">
-      <div class="orbit orbit-one"></div>
-      <div class="orbit orbit-two"></div>
-      <div class="art-label"></div>
-
+    <div class="product-art">
       <img
-        class="chameleon"
-        src="chameleon.png"
-        alt="Mon logo développeur : caméléon vert polygonal aux épines jaunes"
+        src="angelshield-icon.png"
+        alt="Logo AngelShieldPlus : ange au bouclier cyan"
       />
 
-      <div class="art-caption">
-        <span>Kevin Rosala</span>
-        <span>Développeur indépendant</span>
-      </div>
+      <span>Détecter. Alerter. Localiser.</span>
     </div>
   </section>
 
-  <section class="applications" id="applications">
+  <figure class="banner">
+    <img
+      src="angelshield-banner.png"
+      alt="Bannière de présentation d’AngelShieldPlus"
+    />
+
+    <figcaption>
+      Visuel de présentation de l’application.
+    </figcaption>
+  </figure>
+
+  <div class="feature-strip" aria-label="Fonctionnalités principales">
+    <span>
+      01
+      <strong>Détection</strong>
+    </span>
+
+    <span>
+      02
+      <strong>Alertes d’urgence</strong>
+    </span>
+
+    <span>
+      03
+      <strong>Géolocalisation</strong>
+    </span>
+  </div>
+
+  <section
+    class="features"
+    id="fonctionnalites"
+    aria-labelledby="features-title"
+  >
     <div class="section-heading">
       <div>
         <div class="eyebrow">
-          MES APPLICATIONS
+          PENSÉE POUR LES MOMENTS QUI COMPTENT
         </div>
 
-        <h2>
-          Du concret,<br />
-          dans votre poche.
+        <h2 id="features-title">
+          Un petit geste.<br />
+          Un lien essentiel.
         </h2>
       </div>
 
       <p>
-        Découvrez mon application Android<br />
-        et l’histoire derrière le projet.
+        Votre téléphone vous accompagne déjà.<br />
+        Faites-en un moyen de garder le contact<br />
+        lorsque vous avez besoin d’aide.
       </p>
     </div>
 
-    <a class="app-card" routerLink="/angelshield">
-      <div class="app-card-copy">
-        <div class="app-card-title">
-          <img src="angelshield-icon.png" alt="" />
+    <div class="feature-grid">
+      <article>
+        <div class="feature-top">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 3v7m0 4v7M3 12h7m4 0h7M6 6l3 3m6 6l3 3M6 18l3-3m6-6l3-3"
+            />
+          </svg>
 
-          <div>
-            <span class="eyebrow">
-              ANDROID · SÉCURITÉ PERSONNELLE
-            </span>
-
-            <h3>AngelShieldPlus</h3>
-          </div>
+          <span>01</span>
         </div>
 
+        <h3>Détecter un changement</h3>
+
         <p>
-          Détection de perte de verticalité, alertes d’urgence et
-          géolocalisation : une application pour vous aider à prévenir vos
-          proches.
+          La détection de perte de verticalité s’appuie sur les capteurs du
+          téléphone pour repérer un changement de position.
         </p>
+      </article>
 
-        <span class="app-card-link">
-          Découvrir l’application ↗
-        </span>
-      </div>
+      <article>
+        <div class="feature-top">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 5h16v12H9l-5 4V5zm4 4h8m-8 4h5" />
+          </svg>
 
-      <img
-        class="app-card-banner"
-        src="angelshield-banner.png"
-        alt="Bannière AngelShield avec son ange au bouclier bleu"
-      />
-    </a>
+          <span>02</span>
+        </div>
+
+        <h3>Prévenir vos proches</h3>
+
+        <p>
+          Les alertes d’urgence et la communication par SMS vous aident à
+          garder un lien avec vos contacts lorsque la situation le nécessite.
+        </p>
+      </article>
+
+      <article>
+        <div class="feature-top">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0z" />
+            <circle cx="12" cy="10" r="2" />
+          </svg>
+
+          <span>03</span>
+        </div>
+
+        <h3>Donner un repère</h3>
+
+        <p>
+          La géolocalisation apporte une information précieuse en situation
+          d’urgence : votre position.
+        </p>
+      </article>
+    </div>
   </section>
 
-  <section class="about" id="apropos">
+  <section
+    class="questions"
+    id="questions"
+    aria-labelledby="questions-title"
+  >
     <div>
-      <div class="eyebrow">
-        À PROPOS
-      </div>
+      <div class="eyebrow">BON À SAVOIR</div>
 
-      <h2>
-        Une identité.<br />
-        Plusieurs façons de créer.
+      <h2 id="questions-title">
+        Avant de<br />
+        vous lancer.
       </h2>
     </div>
 
-    <div>
-      <p>
-        Je développe des applications web et mobiles, avec une attention
-        particulière à la clarté des interfaces et à leur utilité au quotidien.
-      </p>
+    <div class="faq">
+      <details>
+        <summary>
+          Où télécharger AngelShieldPlus ?
+          <span aria-hidden="true">+</span>
+        </summary>
 
-      <p>
-        J’aime transformer une idée en un produit concret, de la conception
-        technique jusqu’à une interface claire, soignée et agréable à utiliser.
-      </p>
+        <p>
+          L’application est disponible sur Google Play. Le bouton de
+          téléchargement ouvre sa fiche officielle pour consulter les
+          informations à jour et l’installer.
+        </p>
+      </details>
 
-      <div class="skills">
-        <span>Angular</span>
-        <span>Android</span>
-        <span>Python</span>
-      </div>
+      <details>
+        <summary>
+          Mon téléphone est-il compatible ?
+          <span aria-hidden="true">+</span>
+        </summary>
+
+        <p>
+          AngelShieldPlus nécessite Android 8.0 ou une version ultérieure.
+          Consultez Google Play pour vérifier la compatibilité avec votre
+          appareil.
+        </p>
+      </details>
+
+      <details>
+        <summary>
+          Pourquoi l’application demande-t-elle des autorisations ?
+          <span aria-hidden="true">+</span>
+        </summary>
+
+        <p>
+          Selon les fonctions utilisées, l’application a besoin d’accéder à
+          la localisation, aux contacts, aux SMS et aux notifications.
+          Consultez les explications dans l’application et les informations
+          de sa fiche Google Play.
+        </p>
+      </details>
+
+      <details>
+        <summary>
+          Est-ce un service de secours ?
+          <span aria-hidden="true">+</span>
+        </summary>
+
+        <p>
+          AngelShieldPlus est un outil de sécurité personnelle. Il ne remplace
+          pas les services de secours et ne garantit pas qu’une alerte sera
+          reçue. En cas d’urgence immédiate, appelez le 112.
+        </p>
+      </details>
     </div>
+  </section>
+
+  <section class="closing" aria-labelledby="closing-title">
+    <div class="eyebrow">
+      LE PREMIER PAS TIENT DANS VOTRE POCHE
+    </div>
+
+    <h2 id="closing-title">
+      Restez proche.<br />
+      <em>Même à distance.</em>
+    </h2>
+
+    <a
+      class="button primary"
+      [href]="play"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Découvrir AngelShieldPlus ↗
+    </a>
+
+    <p>
+      Retrouvez les détails de l’application sur Google Play.
+    </p>
   </section>
 </main>
 
 <footer>
-  <a class="brand" routerLink="/">
-    Kevin<span>&nbsp;Rosala</span>
+  <a
+    class="brand"
+    routerLink="/angelshield"
+    aria-label="Accueil AngelShieldPlus"
+  >
+    AngelShield<span>Plus</span>
   </a>
 
-  <span>Développeur indépendant.</span>
+  <span>Une application de Kevin Rosala.</span>
 
-  <a routerLink="/angelshield">
-    AngelShieldPlus ↗
+  <a
+    [href]="play"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Fiche Google Play ↗
   </a>
 </footer>
